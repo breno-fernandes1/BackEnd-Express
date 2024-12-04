@@ -6,16 +6,16 @@ const Category = require('./category');
 const Tag = require('./tag');
 
 // Relacionamentos
-User.hasMany(Post, { onDelete: 'CASCADE' });
+User.hasMany(Post); 
 Post.belongsTo(User);
 
-Post.hasMany(Comment, { onDelete: 'CASCADE' });
+Post.hasMany(Comment); 
 Comment.belongsTo(Post);
 
-Category.hasMany(Post);
+Category.hasMany(Post); 
 Post.belongsTo(Category);
 
-Post.belongsToMany(Tag, { through: 'PostTags' });
-Tag.belongsToMany(Post, { through: 'PostTags' });
+Post.belongsToMany(Tag, { through: 'PostTags' }); 
+Tag.belongsToMany(Post, { through: 'PostTags' }); 
 
 module.exports = { sequelize, User, Post, Comment, Category, Tag };
