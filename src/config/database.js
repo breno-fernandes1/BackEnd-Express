@@ -1,7 +1,6 @@
 const { Sequelize } = require('sequelize');
-require('dotenv').config(); // Carregar variáveis do arquivo .env
+require('dotenv').config();
 
-// Configuração do Sequelize
 const sequelize = new Sequelize(
     process.env.DATABASE_NAME, // Nome do banco
     process.env.DATABASE_USER, // Usuário do banco
@@ -9,10 +8,10 @@ const sequelize = new Sequelize(
     {
         host: process.env.DATABASE_HOST, // Host do banco
         port: process.env.DATABASE_PORT, // Porta do banco
-        dialect: 'postgres', // Dialeto do banco
+        dialect: 'postgres', // Dialeto usado (PostgreSQL)
         dialectOptions: {
             ssl: {
-                require: true, // Ativar SSL
+                require: true, // SSL obrigatório
                 rejectUnauthorized: false, // Aceitar certificados autoassinados
             },
         },
