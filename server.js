@@ -1,11 +1,11 @@
 const express = require('express');
-const sequelize = require('./config/database');
-const { User, Post, Comment, Category, Tag } = require('./models');
-const userRoutes = require('./routes/userRoutes');
-const postRoutes = require('./routes/postRoutes');
-const commentRoutes = require('./routes/commentRoutes');
-const categoryRoutes = require('./routes/categoryRoutes');
-const tagRoutes = require('./routes/tagRoutes');
+const sequelize = require('./src/config/database');
+const { User, Post, Comment, Category, Tag } = require('.');
+const userRoutes = require('./src/routes/userRoutes');
+const postRoutes = require('./src/routes/postRoutes');
+const commentRoutes = require('./src/routes/commentRoutes');
+const categoryRoutes = require('./src/routes/categoryRoutes');
+const tagRoutes = require('./src/routes/tagRoutes');
 
 const app = express();
 app.use(express.json());

@@ -1,4 +1,4 @@
-const { Post } = require('../models');
+const { Post } = require('../..');
 
 // GET: Obter todos os posts
 const getPosts = async (req, res) => {
