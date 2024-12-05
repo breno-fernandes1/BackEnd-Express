@@ -1,4 +1,4 @@
-const { Comment } = require('../..');
+const { Comment } = require('../models');
 
 // GET: Obter todos os comentários
 const getComments = async (req, res) => {

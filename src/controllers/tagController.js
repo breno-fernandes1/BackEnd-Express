@@ -1,4 +1,4 @@
-const { Tag } = require('../..');
+const { Tag } = require('../models');
 
 // GET: Obter todas as tags
 const getTags = async (req, res) => {

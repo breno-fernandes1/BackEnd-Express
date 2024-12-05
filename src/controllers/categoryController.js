@@ -1,4 +1,4 @@
-const { Category } = require('../..');
+const { Category } = require('../models');
 
 // GET: Obter todas as categorias
 const getCategories = async (req, res) => {
