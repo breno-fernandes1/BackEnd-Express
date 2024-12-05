@@ -1,9 +1,9 @@
-const sequelize = require('../config/database');
-const User = require('./user');
-const Post = require('./post');
-const Comment = require('./comment');
-const Category = require('./category');
-const Tag = require('./tag');
+const sequelize = require('./src/config/database');
+const User = require('./src/models/user');
+const Post = require('./src/models/post');
+const Comment = require('./src/models/comment');
+const Category = require('./src/models/category');
+const Tag = require('./src/models/tag');
 
 // Relacionamentos
 User.hasMany(Post); 
