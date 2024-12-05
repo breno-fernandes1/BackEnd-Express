@@ -1,6 +1,6 @@
 const express = require('express');
 const sequelize = require('./src/config/database');
-const { User, Post, Comment, Category, Tag } = require('.');
+const { User, Post, Comment, Category, Tag } = require('./src/models');
 const userRoutes = require('./src/routes/userRoutes');
 const postRoutes = require('./src/routes/postRoutes');
 const commentRoutes = require('./src/routes/commentRoutes');
